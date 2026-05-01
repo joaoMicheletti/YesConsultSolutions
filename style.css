@@ -332,7 +332,6 @@ main {
     width: 80%;
     margin-left: 10%;
     padding-top: 30px;
-    background-color: aqua;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -365,4 +364,48 @@ main {
     font-size: 15px;
     color: #ffffff;
     font-weight: 200;
+}
+
+@media(max-width: 700px){
+    .servicos {
+        padding: 10px;
+    }
+    .sub {
+    }
+    .contanirServicos {
+        width: 100%;
+        margin-left: 0%;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .cardServicos {
+        padding: 20px;
+        width: 30%;
+        height: auto;
+    }
+    .cardServicos:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(223, 181, 42, 0.2); /* dourado suave */
+    }
+    .cardServicos img {
+        width: 40px;
+        margin-bottom: 10px;
+    }
+    .titleCard {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: #febf45;
+    }
+    .descricaoCard {
+        margin-top: 10px;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        color: #ffffff;
+        font-weight: 200;
+    }
+
+
 }
