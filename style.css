@@ -252,8 +252,11 @@ main {
     border-radius: 5px;
     border: none;
 }
+.campos:hover {
+    box-shadow: 2px 2px 10px #febf45;
+}
 .txtarea {
-    width: 80%;
+    width: 90%;
     height: 60px;
     border: none;
     border-radius: 5px;
@@ -316,4 +319,28 @@ main {
         font-size: 15px;
         font-weight: 700;
     }
+}
+
+.servicos {
+    padding: 50px;
+}
+.sub {
+    color: black;
+    font-size: 20px;
+}
+.contanirServicos {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 30px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.cardServicos {
+    width: 30%;
+    background-color: #666363;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
