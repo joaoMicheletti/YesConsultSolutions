@@ -422,8 +422,15 @@ main {
         font-weight: 200;
     }
 }
-
+.numberYes {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", Sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
 .numbersSection {
+    margin-top: -30px;
     width: 80%;
     margin-left: 10%;
     border-radius: 10px;
@@ -477,4 +484,60 @@ main {
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     color: black;
+}
+
+@media(max-width: 700px){
+    .numbersSection {
+        width: 80%;
+        margin-left: 10%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    .number {
+        text-align: center;
+        padding: 20px;
+        width: 30%;
+    }
+    .pNumber {
+        margin-top: 10px;
+        color: white;
+        font-family: "Montserrat", Sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+    }
+    #n1{
+    opacity: 0;
+        animation: slideInLeft 2s ease forwards;
+    }
+    #n2 {
+    opacity: 0;
+        animation: slideInLeft 4s ease forwards;
+    }
+    #n3 { 
+        opacity: 0;
+        animation: slideInLeft 6s ease forwards;
+    }
+    .pNumber {
+        background: linear-gradient(
+            to bottom,
+            #FFD700 0%,   /* dourado claro */
+            #D4AF37 40%,  /* dourado clássico */
+            #8C6B1F 70%,  /* dourado escuro */
+            #000000 100%  /* preto */
+        );
+        
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        background-clip: text;
+        color: transparent;
+    }
+    .titleNumber {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        color: black;
+    }
 }
