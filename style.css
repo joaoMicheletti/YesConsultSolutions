@@ -541,3 +541,71 @@ main {
         color: black;
     }
 }
+
+.porQue {
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.divPorque{
+    width: 50%;
+    height: 100vh;
+}
+#divFoto {
+    background-color: #8C6B1F;
+    background-image: url(assets/metade.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#divConteudo{
+    background-color: blueviolet;
+    padding: 30px;
+    text-align: center;
+}
+.TitlePorque{
+    margin-top: 10px;
+    color: white;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1em;
+}
+.SubtituloPorque {
+
+}
+.iconPorque {
+    background-color: #febf45;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.iconIcon {
+    background-color: red;
+    width: 20%;
+}
+.txtIcon {
+    background-color: green;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pTitleIcon {
+    margin-top: 10px;
+    color: white;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1em;
+}
+.descricaoIconP {
+
+}
