@@ -648,3 +648,50 @@ main {
     }
     
 }
+
+.parceiros {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.parceiros h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.parceiros p {
+    color: #aaa;
+    margin-bottom: 50px;
+}
+
+/* CARROSSEL */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.track {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    transition: transform 0.6s ease;
+}
+
+/* LOGOS */
+.logo {
+    width: 120px;
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+}
+
+/* LOGO CENTRAL */
+.logo.active {
+    width: 180px;
+    opacity: 1;
+    transform: scale(1.1);
+}

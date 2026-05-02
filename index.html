@@ -253,6 +253,51 @@
             </div>
         </div>
     </section>
+    <section class="parceiros">
+        <h2>Nossos Parceiros</h2>
+        <p>Empresas que confiam e crescem junto com nossas soluções</p>
+
+        <div class="carousel">
+            <div class="track" id="track">
+                <img src="assets/logcare.png" class="logo active">
+                <img src="assets/spi.webp" class="logo">
+                <img src="assets/vm.webp" class="logo">
+                <img src="assets/anLogo.webp" class="logo">
+                <img src="assets/logcare.png" class="logo">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const track = document.getElementById('track');
+        let index = 0;
+
+        function updateCarousel() {
+            const logos = document.querySelectorAll('.logo');
+
+            // remove active
+            logos.forEach(l => l.classList.remove('active'));
+
+            // define centro
+            const centerIndex = index + 1;
+            if (logos[centerIndex]) {
+                logos[centerIndex].classList.add('active');
+            }
+
+            // move o track
+            track.style.transform = `translateX(-${index * 160}px)`;
+
+            index++;
+
+            // loop infinito (reset suave)
+            if (index > logos.length - 3) {
+                index = 0;
+            }
+        }
+
+        // auto play
+        setInterval(updateCarousel, 2500);
+        </script>
 
 </body>
 </html>
