@@ -267,7 +267,70 @@
             </div>
         </div>
     </section>
+    <section class="historia">
+        <div id="h" class="contenthistoria">
+            <p class="historiaAbertura">
+                Nossa História 
+            </p>
+            <p class="tituloHistoria">
+                Mais de 14 anos transformando experiência em resultados reais
+            </p>
+            <p class="descricaoHistoria">
+                Ao longo de mais de uma década, construímos uma 
+                trajetória sólida baseada em estratégia, 
+                inovação e compromisso com resultados. 
+                Nossa experiência no mercado nos permite 
+                entregar soluções eficientes, seguras e 
+                alinhadas às necessidades de cada cliente.
+            </p>
+        </div>
+        <div id="carr" class="contenthistoria">
+            <div class="carroselFunders">
+                <button  class="buttonCard"> &lt; </button>
+                <div id="yago" class="cardFunder">
+                    <img class="fotoperfil" src="assets/yago.webp" alt="fotoperfil"/>
+                    <p class="nomeFunder">Yago Ciboff</p>
+                    <p class="cargo">Funder</p>
+                    <p class="funderDescricao">
+                        Visionário e empreendedor, lidera a 
+                        empresa com foco em crescimento estratégico, 
+                        inovação e geração de resultados consistentes.
+                    </p>
+                </div>
+                <div id="joao" class="cardFunder">
+                    <img class="fotoperfil" src="assets/joao.webp" alt="fotoperfil"/>
+                    <p class="nomeFunder">João Micheletti </p>
+                    <p class="cargo">Socio Fundador</p>
+                    <p class="funderDescricao">
+                        Responsável pela área tecnológica, 
+                        desenvolve soluções inteligentes e escaláveis que impulsionam a 
+                        eficiência e o crescimento dos negócios.
+                    </p>
+                </div>
+                <button  class="buttonCard"> &gt; </button>
+            </div>
+        </div>
+    </section>
+    <script>
+        const btns = document.getElementsByClassName('buttonCard')
+        const joao = document.getElementById('joao');
+        const yago = document.getElementById('yago');
 
+        for (let btn of btns) {
+            btn.addEventListener('click', function() {
+
+                const displayJoao = window.getComputedStyle(joao).display;
+
+                if (displayJoao === 'none') {
+                    joao.style.display = 'block';
+                    yago.style.display = 'none';
+                } else {
+                    joao.style.display = 'none';
+                    yago.style.display = 'block';
+                }
+            });
+        }
+    </script>
     <script>
         const track = document.getElementById('track');
         let index = 0;
@@ -297,7 +360,7 @@
 
         // auto play
         setInterval(updateCarousel, 2500);
-        </script>
+    </script>
 
 </body>
 </html>
