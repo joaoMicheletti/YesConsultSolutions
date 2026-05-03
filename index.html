@@ -27,8 +27,8 @@
     <header class="header">
         <div class="containerHeader">
             <div class="foneHeader">
-                 <a target="_blank" href="#"><i class="icon fa-solid fa-phone"></i>
-                  +55 (11) 93222-3533</a>
+                 <a target="_blank" href="https://wa.me/5511933766883"><i class="icon fa-solid fa-phone"></i>
+                  +55 11 93376-6883</a>
             </div>
             <div class="socialRede">
                 <!-- Instagram -->
@@ -100,7 +100,7 @@
             </p>
         </div>
     </div>
-    <section class="formulario">
+    <section id="Form" class="formulario">
         <div class="margin">
             <div class="contentFormulario">
                 <p class="titleMain">
@@ -112,14 +112,14 @@
             </div>
             <div class="form">
                 <img class="logoHomeImg" src="assets/logoHome.webp" /><br/><br/>
-                <input placeholder=" Nome" type="text" class="campos"/>
-                <input placeholder=" Cargo" type="text" class="campos"/>
-                <input placeholder=" Nome Empresa" type="text" class="campos"/>
-                <input placeholder=" E-mail" type="email" class="campos"/>
-                <input placeholder=" Telefone" type="number" class="campos"/>
-                <input placeholder=" Cidade - UF" type="text" class="campos"/>
-                <textarea class="txtarea" placeholder="  Descreva sua Necessidade..."></textarea>
-                <button class="sendForm">Enviar</button>
+                <input id="nome" placeholder=" Nome" type="text" class="campos"/>
+                <input id="cargo" placeholder=" Cargo" type="text" class="campos"/>
+                <input id="empresa" placeholder=" Nome Empresa" type="text" class="campos"/>
+                <input id="email" placeholder=" E-mail" type="email" class="campos"/>
+                <input id="telefone" placeholder=" Telefone" type="number" class="campos"/>
+                <input id="cidade" placeholder=" Cidade - UF" type="text" class="campos"/>
+                <textarea id="txtarea" class="txtarea" placeholder="  Descreva sua Necessidade..."></textarea>
+                <button id="sendMessage" class="sendForm">Enviar</button>
             </div>
         </div>
         
@@ -311,6 +311,51 @@
             </div>
         </div>
     </section>
+    <section class="faq">
+        <h2>Perguntas Frequentes</h2>
+        <p>Esclarecemos as principais dúvidas para você tomar a melhor decisão com segurança.</p>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question">Quais serviços a Yes oferece?</button>
+                <div class="faq-answer">
+                    <p>Oferecemos soluções completas em tecnologia, logística, transporte e desenvolvimento de sistemas, sempre focados em eficiência e resultados.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Como funciona o processo de contratação?</button>
+                <div class="faq-answer">
+                    <p>Iniciamos com um diagnóstico do seu negócio, entendemos suas necessidades e estruturamos uma solução personalizada.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">As soluções são personalizadas?</button>
+                <div class="faq-answer">
+                    <p>Sim. Cada projeto é desenvolvido sob medida, considerando os objetivos e desafios específicos da sua empresa.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Vocês oferecem suporte após a entrega?</button>
+                <div class="faq-answer">
+                    <p>Sim, garantimos acompanhamento contínuo para assegurar performance, estabilidade e evolução das soluções.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Por que escolher a Yes?</button>
+                <div class="faq-answer">
+                    <p>Unimos experiência, inovação e atendimento dedicado para entregar soluções confiáveis que realmente geram crescimento.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#Form" class="faq-btn">Falar com um especialista</a>
+    </section>
     <script>
         const btns = document.getElementsByClassName('buttonCard')
         const joao = document.getElementById('joao');
@@ -360,6 +405,61 @@
 
         // auto play
         setInterval(updateCarousel, 2500);
+    </script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+
+                // fecha outros
+                document.querySelectorAll('.faq-item').forEach(el => {
+                    if (el !== parent) {
+                        el.classList.remove('active');
+                    }
+                });
+
+                // toggle atual
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('sendMessage').addEventListener('click', function() {
+
+            // capturar valores
+            const nome = document.getElementById('nome').value.trim();
+            const cargo = document.getElementById('cargo').value.trim();
+            const empresa = document.getElementById('empresa').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const cidade = document.getElementById('cidade').value.trim();
+            const mensagem = document.getElementById('txtarea').value.trim();
+
+            // validação simples
+            if (!nome || !cargo || !empresa || !email || !telefone || !cidade || !mensagem) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            // montar mensagem (cada item em uma linha)
+            const texto = 
+        `*Novo contato pelo site*%0A
+        Nome: ${nome}%0A
+        Cargo: ${cargo}%0A
+        Empresa: ${empresa}%0A
+        E-mail: ${email}%0A
+        Telefone: ${telefone}%0A
+        Cidade: ${cidade}%0A
+        Mensagem: ${mensagem}`;
+
+            // número (coloque o seu com DDI e DDD)
+            const numero = '5511933766883';
+
+            // abrir whatsapp
+            const url = `https://wa.me/${numero}?text=${texto}`;
+
+            window.open(url, '_blank');
+        });
     </script>
 
 </body>
